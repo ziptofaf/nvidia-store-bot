@@ -10,3 +10,5 @@ Then put '2060S' as a card (as this one is actually available so we can go throu
 Then run the bot - within few seconds it should get you to a summary page. Ensure that product is correct and that your information is entered. 
 
 Done all that? Nice! Now and only now can you turn off the bot and the browser, change the mode to 'full' and GPU to the one you actually want to buy. 
+
+Note - I actually hope you don't buy the card with it and by the time you download this tool it will no longer work. If it still does it means they really don't care about anti bot security. 
