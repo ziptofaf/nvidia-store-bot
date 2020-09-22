@@ -2,11 +2,11 @@
 
 Nvidia actually implemented captcha on their checkout page. This means that minimal and checkout modes in config.yaml will still work but full will not (as this bot doesn't resolve captchas). So take this into account - feel free to keep on using it to refresh the Nvidia page and to fill your address but you will have to solve the captcha and actually click on submit when bot is done. 
 
-First and foremost - go visit the config.yaml file and fill it correctly. 
-Second - you will need Firefox browser in the latest version and Geckodriver. You can obtain Geckodriver here:
-https://github.com/mozilla/geckodriver/releases
 
-Download it and unpack it to the same directory as the program. 
+1. First and foremost - go visit the config.yaml file and fill it correctly. 
+2. Second - you will need Firefox browser in the latest version and Geckodriver. You can obtain Geckodriver here:
+https://github.com/mozilla/geckodriver/releases
+3. Download it and unpack it to the same directory as the program. 
 
 Then let's check if bot works correctly for you - enter 'checkout' in the mode field and your actual information.
 Then put '2060S' as a card (as this one is actually available so we can go through checkout process safely)
