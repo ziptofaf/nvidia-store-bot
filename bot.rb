@@ -48,12 +48,12 @@ class Bot
         sleep(600)
         return
       end
-      sleep(rand(30..60))
+      wait_before_reloading
     end
   end
 
   def wait_before_reloading
-    average_time = config['sleep_for']
+    average_time = config['refresh_time']
     minimum = average_time.to_i / 2
     maximum = average_time.to_i  + minimum
     sleep(rand(minimum..maximum))
