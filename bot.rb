@@ -16,7 +16,6 @@ class Bot
 
   def initialize_firefox_driver
     profile = Selenium::WebDriver::Firefox::Profile.new
-    profile["permissions.default.image"] = 2
 
     Capybara.register_driver :imageless_firefox do |app|
       Capybara::Selenium::Driver.new(app, :browser => :firefox, :profile => profile)
@@ -46,12 +45,18 @@ class Bot
         add_to_cart
         handle_checkout
         go_to_summary
-        complete_order if config['mode'] == 'full'
         sleep(600)
         return
       end
-      sleep(rand(3..5))
+      sleep(rand(30..60))
     end
+  end
+
+  def wait_before_reloading
+    average_time = config['sleep_for']
+    minimum = average_time.to_i / 2
+    maximum = average_time.to_i  + minimum
+    sleep(rand(minimum..maximum))
   end
 
   def add_to_cart
@@ -88,12 +93,6 @@ class Bot
 
   def go_to_summary
     find('#dr_siteButtons input.dr_button').click
-  end
-
-  def complete_order
-    sleep_until_exists('#dr_confirmAddress')
-    p Time.now
-    #find('#dr_siteButtons input.dr_button').click
   end
 
   def sleep_until_exists(selector)

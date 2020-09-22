@@ -1,19 +1,20 @@
 location: 'pl' # us, uk, pl only supported. Note - use your actual location here, otherwise Nvidia will redirect you to their main page (so no cross-region support for this bot)
 mode: 'checkout' # minimal, checkout and full. Minimal just refreshes the site and beeps when the card has been found. Checkout also adds the card to cart and fills all the addres + payment info. Full completes the order fro you.
 card: '2060S' # 3080, 3090, 3070 and 2060S supported
+refresh_time: 5 # how often (in seconds) on average should nvidia site be refreshed. Setting this TOO low (eg. 5s) will get your browser banned for several hours.
 address:
   first_name: 'Dave'
   last_name: 'Test'
-  phone_number: '12345'
-  email: '4@gmail.com'
+  phone_number: '123456789'
+  email: 'test@gmail.com'
   street: '5'
   apartment_number: 
-  city: '6'
+  city: 'Warsaw'
   state: ''
-  postal_code: '7'
+  postal_code: '01-001'
 payment:
   method: 'cc' # only cc (credit card) supported.
-  card_number: '123456' #no spacebars, eg. 1234567899123456
+  card_number: '4556066345017280' #no spacebars, eg. 1234567899123456
   cvv: '111' #eg. 123
   expiration_month: '12' #eg. 12 or 7
   expiration_year: '2022' #eg. 2023
